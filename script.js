@@ -57,8 +57,11 @@ function initGame( selectedMode, level ){
 		bgPlay = true;
 		audioIntro.play();
 		setTimeout( function(){
+
 			audio.play();
 			audio.volume = 0.4;
+			playButton.closest('#play-pause-container').classList.toggle('d-none');
+
 		}, 1000 );
 		document.getElementById('intro-text').classList.toggle('d-none');
 		document.getElementById('points-container').classList.toggle('d-none');
@@ -87,9 +90,16 @@ function initGame( selectedMode, level ){
 
 }
 
-function endGame( e ) {
+function endGame( event ) {
 
 	let cards = document.querySelectorAll( ".scene--card" );
+	let card = event.target;
+
+	let cardContainer = card.closest('.card');
+	if( cardContainer === null ) {
+		return false;
+	}
+
 	for ( let i = 0 ; i < cards.length; i++ ) {
 		cards[ i ].removeEventListener( 'click' , endGame , false ) ;
 	}
@@ -98,9 +108,6 @@ function endGame( e ) {
 	let errorElem = document.getElementById( 'errors' );
 
 	let points = parseInt( pointsElem.innerHTML );
-
-	let card = event.target;
-	let cardContainer = card.closest('.card');
 
 	const choice = card.innerHTML;
 	let results = false;
@@ -212,3 +219,15 @@ startButton.addEventListener( 'click' , function(){
 	startButton.classList.toggle('d-none');
 
 } , false ) ;
+
+
+let playButton = document.getElementById('play');
+playButton.addEventListener( 'click' , function(){
+
+	if( audio.paused ){
+		audio.play();
+	}else{
+		audio.pause();
+	}
+
+});

@@ -219,6 +219,7 @@ h1{
 	top: 25vh;
 	width: 100vw;
 }
+
 #points-container{ text-align: center; }
 .card {
 	font-family: sans-serif;
@@ -395,4 +396,36 @@ button {
 	-4px -4px 6px 0 rgba(116, 125, 136, .2),
 	inset -4px -4px 6px 0 rgba(255,255,255,.5),
 	inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+
+#play-pause-container{
+	position: absolute;
+	bottom: 80px;
+	left: 80px;
+}
+
+#play{
+  display: none;
+}
+
+#play:checked~.icon{
+  width:16px;
+  height:48px;
+  border-left: 16px solid #ffffff;
+  border-right: 16px solid #ffffff;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+}
+
+.icon{
+  position: absolute;
+  margin: auto;
+  left:0;right:0;
+  bottom:0;top:0;
+  width:0;
+  height:0;
+  border-top: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  border-left: 48px solid #ffffff;
+  transition: all .3s ease;
 }
