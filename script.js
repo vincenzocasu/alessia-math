@@ -204,11 +204,17 @@ function restartGame( points, results ) {
 		showTextLevelMessage( 'Livello ' + (parseInt(level-2)) );
 	}
 
+	let currentLevel = level;
+
+	if( currentLevel > 5 ){
+		currentLevel = 5;
+	}
+
 	let cardsContainer = document.getElementById( 'cards-container' );
 	cardsContainer.innerHTML = '';
 
 	selectedMode = Math.floor( Math.random() * mode.length );
-	initGame( selectedMode, level );
+	initGame( selectedMode, currentLevel );
 
 }
 
