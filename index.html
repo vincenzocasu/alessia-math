@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alessia impara i numeri</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+	<div class="area">
+		<ul class="circles">
+			<li><span>1</span></li>
+			<li><span>4</span></li>
+			<li><span>29</span></li>
+			<li><span>85</span></li>
+			<li><span>71</span></li>
+			<li><span>62</span></li>
+			<li><span>3</span></li>
+			<li><span>21</span></li>
+			<li><span>92</span></li>
+			<li><span>55</span></li>
+		</ul>
+	</div>
+
+	<div id="container">
+		<audio id="bg-audio" loop>
+			<source src="./sounds/bg.mp3"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+		<audio id="audio-fail">
+			<source src="./sounds/fail.mp3"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+		<audio id="audio-ok">
+			<source src="./sounds/ok.mp3"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+		<audio id="audio-flip">
+			<source src="./sounds/flip.wav"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+
+		<audio id="audio-intro-text">
+			<source src="./sounds/intro.mp3"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+
+		<audio id="audio-booster">
+			<source src="./sounds/booster.mp3"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+
+		<audio id="audio-booster-lost">
+			<source src="./sounds/lost-booster.wav"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+
+		<audio id="audio-new-level">
+			<source src="./sounds/new-level.mp3"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+
+		<audio id="audio-good">
+			<source src="./sounds/spettacolo.mp3"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+
+		<audio id="audio-ops">
+			<source src="./sounds/attenzione.mp3"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+
+		<h1>Alessia impara i Numeri</h1>
+		<h2 id="mode"></h2>
+
+		<h2 id="intro-text">Ciao Alessia!<br/>Sei pronta per la sfida?</h2>
+		<button id="start-game" class="custom-btn btn-9">INIZIA</button>
+
+		<div id="points-container" class="d-none">
+			<span class="bold game-label">Turno: </span><span id="game" class="label">1</span> | <span class="bold points-label">Punteggio: </span><span id="points" class="label">0</span> | <span class="bold errors-label">Errori: </span><span id="errors" class="label">0</span>
+		</div>
+
+		<h2 id="level-text" class="d-none">Livello 1</h2>
+
+		</div>
+		<div id="cards-container">
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+		<script src="script.js"></script>
+
+	</body>
+	</html>
