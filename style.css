@@ -8,7 +8,7 @@
 
 html {
 	height: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 
@@ -447,7 +447,6 @@ button {
 
 	#cards-container {
     top: 40vh;
-		overflow: auto;
 	}
 
 	.scene.scene--card {
