@@ -58,7 +58,7 @@ function initGame( selectedMode, level ){
 		audioIntro.play();
 		setTimeout( function(){
 			audio.play();
-			audio.volume = 0.2;
+			audio.volume = 0.4;
 		}, 1000 );
 		document.getElementById('intro-text').classList.toggle('d-none');
 		document.getElementById('points-container').classList.toggle('d-none');
